@@ -5,6 +5,7 @@ import type { MenuProps } from 'antd';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import PriceTotal from './components/PriceTotal'
 import Handler from './components/Handler'
+import ProductGrid from './components/ProductGrid'
 
 const { Header, Content, Sider } = Layout;
 
@@ -38,7 +39,7 @@ const App: React.FC = () => {
           >
 
             <PriceTotal />
-            Content
+            <ProductGrid />
             <Handler />
 
           </Content>

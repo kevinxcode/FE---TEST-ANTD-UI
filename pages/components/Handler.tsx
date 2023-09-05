@@ -8,8 +8,9 @@ export default function Handler() {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginTop: 10,
-        padding: 24,
+      
+        paddingLeft: 100,
+        paddingRight: 100,
         margin: 0,
         height: 120,
         background: '#c7c7c7',
@@ -20,7 +21,6 @@ export default function Handler() {
       }}>
        
     <Button type="primary">ADD</Button>
-    <Button type="primary">DELETE</Button>
     <Button type="primary">CLEAR</Button>
     <Checkbox >Member</Checkbox>
 
