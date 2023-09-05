@@ -1,0 +1,12 @@
+[
+    {"product_id": "300001", "name": "PILLOW POW KJ 16g", "price": 25000 },
+    {"product_id": "300002", "name": "RICHEESE WFR KJ 20,5g", "price": 21000 },
+    {"product_id": "300003", "name": "NABATI PLV 145g GT", "price": 35000 },
+    {"product_id": "300004", "name": "NABATI RCE 320g MT", "price": 17000 },
+    {"product_id": "300005", "name": "RICHEESE ROLL'S KJ 8g", "price": 25000 },
+    {"product_id": "300006", "name": "NABATI KERIPIK SINGKONG BARBEQUE ", "price": 18000 },
+    {"product_id": "300007", "name": "RICHEESE BISVIT NON SANDWICH 57g", "price": 5000 },
+    {"product_id": "300008", "name": "RICHOCO WAFER COKLAT TEBAL 53,5g", "price": 21000 },
+    {"product_id": "300009", "name": "NABATI BISVIT SANDWICH KJ 192g GT", "price": 12000 },
+    {"product_id": "300010", "name": "SIIP CKLT KJ 9g LX", "price": 15000 }
+    ]
