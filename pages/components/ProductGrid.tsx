@@ -1,38 +1,34 @@
 
-import React from 'react';
+import React, { useEffect, useState }  from 'react';
 import { Space, Table, Tag } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 
+import axios from 'axios';
+import Order from '../api/order';
+
 export default function Handler() {
-  interface DataType {
-    key: string;
-    name: string;
-    age: number;
-    address: string;
-    tags: string[];
-  }
+
   
   const columns: ColumnsType<DataType> = [
     {
       title: 'No',
-      dataIndex: 'No',
-      key: 'No',
-      render: (text) => <a>{text}</a>,
+      dataIndex: 'id',
+      key: 'id',
     },
     {
       title: 'Product',
-      dataIndex: 'Product',
-      key: 'Product',
+      dataIndex: 'name',
+      key: 'name',
     },
     {
       title: 'Price',
-      dataIndex: 'Price',
-      key: 'Price',
+      dataIndex: 'price',
+      key: 'price',
     },
     {
       title: 'QTY',
-      dataIndex: 'Qty',
-      key: 'Qty',
+      dataIndex: 'qty',
+      key: 'qty',
     },
     {
       title: 'Subtotal',
@@ -51,30 +47,18 @@ export default function Handler() {
       ),
     },
   ];
+
+  useEffect(() => {
+    async function fetchTodos() {
+      const response = await axios.get<Order[]>('../api/orderList');
+      console.log(response.data);
+      setData(response.data);
+    }
+
+    fetchTodos();
+  }, []);
   
-  const data: DataType[] = [
-    {
-      key: '1',
-      name: 'John Brown',
-      age: 32,
-      address: 'New York No. 1 Lake Park',
-      tags: ['nice', 'developer'],
-    },
-    {
-      key: '2',
-      name: 'Jim Green',
-      age: 42,
-      address: 'London No. 1 Lake Park',
-      tags: ['loser'],
-    },
-    {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sydney No. 1 Lake Park',
-      tags: ['cool', 'teacher'],
-    },
-  ];
+  const [data, setData] = useState([]);
 
   
   return (

@@ -7,6 +7,8 @@ import PriceTotal from './components/PriceTotal'
 import Handler from './components/Handler'
 import ProductGrid from './components/ProductGrid'
 
+
+
 const { Header, Content, Sider } = Layout;
 
 const items1: MenuProps['items'] = ['1', '2'].map((key) => ({
